@@ -28,8 +28,8 @@
       </div>
     </div>
 
-    <h1 class="text-3xl mt-5 font-semibold">Snehashis Dasgupta</h1>
-    <h3 class="text-md">@username</h3>
+    <h1 class="text-3xl mt-5 font-semibold"><%= user.email %></h1>
+    <h3 class="text-md">@<%= user.username %></h3>
     <a
       href="/edit"
       class="mt-5 px-7 py-2 bg-zinc-700 rounded-full text-xs font-semibold"
@@ -45,14 +45,21 @@
   <div class="cards flex flex-wrap gap-10 px-10 mt-10">
     <div class="card">
       <div class="w-52 h-40 bg-zinc-200 rounded-lg overflow-hidden">
-        <img
-          class="w-full h-full object-cover"
-          src="/images/uploads/<%= user?.posts[user.posts.length-1].image %>"
-          alt="pic"
-        />
+
+        <a href="/show/posts">
+          <img
+            class="w-full h-full object-cover"
+            src="/images/uploads/<%= user?.posts[user.posts.length-1].image %>"
+            alt="pic"
+          />
+        </a>
+
       </div>
-      <h3 class="text-xl font-semibold mt-3">Your Uploaded Pins</h3>
-      <h5 class="text-sm font-medium opacity-60"> <%= user.posts.length %> </h5>
+
+      <a href="/show/posts" class="inline-block text-xl font-semibold mt-3">
+        Your Uploaded Pins
+      </a>
+      <h5 class="text-sm font-medium opacity-60"> <%= user.posts.length %> Pins</h5>
     </div>
   </div>
 </div>
