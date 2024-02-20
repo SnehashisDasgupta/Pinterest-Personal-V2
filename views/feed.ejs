@@ -4,13 +4,14 @@
 
         <div class="cards flex flex-wrap gap-10">
 
-            <% user.posts.forEach(function(elem){ %>
+            <% posts.forEach(function(elem){ %>
                 <div class="card w-50">
     
-                    <div class="w-full h-40 rounded-lg overflow-hidden">
+                    <div class="w-full h-40 bg-zinc-700 rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="/images/uploads/<%= elem.image %>" alt="">
                     </div>
                     <h5 class="mt-3 text-sm"><%= elem.title %></h5>
+                    <h6 class="text-xs font-semibold opacity-60">@<%= elem.user.username %></h6>
                 </div>
             <% }) %>
 

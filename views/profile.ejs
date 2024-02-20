@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <h1 class="text-3xl mt-5 font-semibold"><%= user.email %></h1>
+    <h1 class="text-3xl mt-5 font-semibold"><%= user.name %></h1>
     <h3 class="text-md">@<%= user.username %></h3>
     <a
       href="/edit"
@@ -49,7 +49,7 @@
         <a href="/show/posts">
           <img
             class="w-full h-full object-cover"
-            src="/images/uploads/<%= user?.posts[user.posts.length-1].image %>"
+            src="/images/uploads/<%= user?.posts[user.posts.length-1]?.image %>"
             alt="pic"
           />
         </a>
