@@ -13,7 +13,6 @@ Some Features:
 -   👾 Profile picture can be added
 -   🚀 Upload posts using multer
 -   👌 Watch everyone's post on feed
--   🐞 Error handling both on the server and on the client
 
 
 Routes:
@@ -21,6 +20,5 @@ Routes:
 - /login 
 - /profile 
 - /feed: feed page with all different pins
-- /save/:pinid - to save the pin in board
 - /createpost: to upload post
 - /logout
